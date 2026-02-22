@@ -1,5 +1,4 @@
-## Week 1 - Tasks
----
+# Week 1 - Tasks
 
 ### 1. Temperature Converter 
 Write an application to:
