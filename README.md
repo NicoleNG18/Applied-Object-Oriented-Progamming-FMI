@@ -1,2 +1,3 @@
-# Applied-Object-Oriented-Progamming-FMI
-A repository dedicated to solving practical problems from the Applied Object-Oriented Programming course using Java
+## Приложно Обектно Ориентирано Програмиране - част 1 
+
+1. Въведение в ООП с Java. Типове данни, класове и създаване на обекти. Обектно ориентиран анализ. Основни релации между класове. Програмиране на Java в интегрирана среда за разработка на софтуерни проекти
