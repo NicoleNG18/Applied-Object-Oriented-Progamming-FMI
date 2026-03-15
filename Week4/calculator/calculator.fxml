@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.CalculatorController">
+    <children>
+        <TextField fx:id="txtDisplay" onAction="#txtOnAction" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="380.0" style="-fx-border-color: #0091ea; -fx-border-width: 2;" text="0">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </TextField>
+
+        <GridPane alignment="CENTER" hgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="160.0" /> <ColumnConstraints hgrow="SOMETIMES" minWidth="105.0" /> <ColumnConstraints hgrow="SOMETIMES" minWidth="95.0" />  </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+
+                <VBox style="-fx-border-color: #888888; -fx-padding: 8; -fx-background-color: #e0e0e0;" GridPane.columnIndex="0">
+                    <children>
+                        <GridPane hgap="5.0" vgap="5.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="45.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="45.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="45.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="45.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="1" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="4" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="50.0" text="0" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                <Button onAction="#btnHandleDigit" prefHeight="45.0" prefWidth="105.0" text="00" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </VBox>
+
+                <VBox style="-fx-border-color: #888888; -fx-padding: 8; -fx-background-color: #e0e0e0;" GridPane.columnIndex="1">
+                    <children>
+                        <GridPane hgap="5.0" prefHeight="195.0" vgap="5.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="45.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="45.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints percentHeight="25.0" vgrow="SOMETIMES" />
+                                <RowConstraints percentHeight="25.0" vgrow="SOMETIMES" />
+                                <RowConstraints percentHeight="25.0" vgrow="SOMETIMES" />
+                                <RowConstraints percentHeight="25.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button maxHeight="Infinity" maxWidth="Infinity" onAction="#btnHandleOperation" text="+" GridPane.rowIndex="0" GridPane.rowSpan="3" />
+                                <Button maxHeight="Infinity" maxWidth="Infinity" onAction="#btnHandleOperation" text="-" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Button maxHeight="Infinity" maxWidth="Infinity" onAction="#btnHandleOperation" text="*" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Button maxHeight="Infinity" maxWidth="Infinity" onAction="#btnHandleOperation" text="/" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Button maxHeight="Infinity" maxWidth="Infinity" onAction="#btnHandleDigit" text="." GridPane.rowIndex="3" />
+                                <Button maxHeight="Infinity" maxWidth="Infinity" onAction="#btnHandleEqual" text="=" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </VBox>
+
+                <VBox spacing="10.0" GridPane.columnIndex="2">
+                    <children>
+                        <VBox spacing="10.0" style="-fx-border-color: #888888; -fx-padding: 8; -fx-background-color: #e0e0e0;">
+                            <children>
+                                <Button onAction="#btnHandleClear" prefHeight="45.0" prefWidth="85.0" text="C" />
+                                <Button onAction="#btnHandleAllClear" prefHeight="45.0" prefWidth="85.0" text="C/A" />
+                            </children>
+                        </VBox>
+                        <VBox VBox.vgrow="ALWAYS" />
+                        <VBox style="-fx-border-color: #888888; -fx-padding: 8; -fx-background-color: #e0e0e0;">
+                            <children>
+                                <Button onAction="#btnHandleOff" prefHeight="40.0" prefWidth="85.0" text="OFF" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+            </children>
+        </GridPane>
+    </children>
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+</VBox>
