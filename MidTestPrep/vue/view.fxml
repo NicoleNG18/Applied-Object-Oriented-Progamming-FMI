@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="20.0" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.Controller">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="250.0" /> <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" /> </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" /> </rowConstraints>
+
+    <children>
+
+        <VBox alignment="CENTER" prefHeight="380.0" prefWidth="220.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <children>
+
+                <VBox spacing="10.0">
+                    <children>
+                        <Button fx:id="btnShowSorted" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnShowSortedByAgeOnAction" text="Show all sorted by age">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnShuffle" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnShuffleSamplesOnAction" text="Shuffle samples" />
+                        <Button fx:id="btnDistRegions" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDistributionByRegionsOnAction" text="Distribution by regions" />
+                        <Button fx:id="btnShowEndangered" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnShowEndangeredOnAction" text="Show endangered by Animal type" />
+      
+                      <Button fx:id="btnQuit" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnQuitOnAction" text="Quit">
+                          <VBox.margin>
+                              <Insets bottom="10.0" />
+                          </VBox.margin>
+                      </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+
+        <TextArea fx:id="txtResults" editable="false" focusTraversable="false" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </GridPane.margin>
+        </TextArea>
+
+    </children>
+
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+</GridPane>
